@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="Style/MiPerfil.css">
+</head>
+<body>
+
+    <nav class="p-2 bg-dark">
+            
+        <div class="container m-0 p-0">
+            <button class="btn bg-light text-center mt-0 mb-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                <svg  style="color:rgb(146, 22, 22)" xmlns="http://www.w3.org/2000/svg" width="16" height="16"  class="bi bi-chevron-double-left" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8.354 1.646a.5.5 0 0 1 0 .708L2.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
+                <path fill-rule="evenodd" d="M12.354 1.646a.5.5 0 0 1 0 .708L6.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
+              </svg>
+            </button>
+            <label class="display-6 bg-dark text-light mt-2" for="">Agenda Electrónica</label>
+        </div>
+
+        <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title mt-3 display-6 text-light text-center" id="offcanvasScrollingLabel">Gestiona tu agenda</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+
+          <div class="offcanvas-body text-center">
+
+                        <a class="d-block mb-4" href="">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
+                                <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z"/>
+                              </svg>
+                              <span>Contactos</span>
+                        </a>
+
+                    
+                        <a  class="d-block mb-4" href="index.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-in-left" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M10 3.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 1 1 0v2A1.5 1.5 0 0 1 9.5 14h-8A1.5 1.5 0 0 1 0 12.5v-9A1.5 1.5 0 0 1 1.5 2h8A1.5 1.5 0 0 1 11 3.5v2a.5.5 0 0 1-1 0z"/>
+                                <path fill-rule="evenodd" d="M4.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H14.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708z"/>
+                              </svg>
+                              <span>Cerrar sesión</span>
+                        </a>
+                       
+          </div>
+        </div>
+
+    </nav>
+
+    <main>
+
+        <div class="button-group  text-center ">
+            <button class="btn bg-secondary text-light p-3" data-bs-toggle="modal" data-bs-target="#ModalCrear">Crear Contacto</button>
+            <button class="btn bg-secondary text-light p-3" data-bs-toggle="modal" data-bs-target="#ModalActualizar">Actualizar Contacto</button>
+            <button class="btn bg-secondary text-light p-3 " data-bs-toggle="modal" data-bs-target="#ModalEliminar">Eliminar Contacto</button>
+        
+        </div>
+
+        <div class="container ">
+            <div class="row justify-content-end m-4">
+                <div class="col-2">
+                    <div class="input-group has-validation">
+                        <span class="input-group-text" id="inputGroupPrepend"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                        </svg>
+                        </span>
+                        <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required placeholder="Nombre">
+                        <div class="invalid-feedback"></div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <select class="form-select" name="" id="">
+                        <option selected>Sort by</option>
+                        <option>Orden Alfabetico</option>
+                        <option>Fecha</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <table class="table table-secondary table-striped table-hover">
+            <thead>
+                <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Teléfono</th>
+                    <th scope="col">Dirección</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Sexo</th>
+                    <th scope="col">Imagen</th>
+                    <th scope="col">Relación personal</th>
+                </tr>
+            </thead>
+           
+            <tbody>
+                <td scope="row">1</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tbody>
+            <tbody>
+                <th scope="row">2</th>
+                <th></th>
+                <th></th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tbody>
+            <tbody>
+                <th scope="row">3</th>
+                <th></th>
+                <th></th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tbody>
+            <tbody>
+                <th scope="row">4</th>
+                <th></th>
+                <th></th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tbody>
+            <tbody>
+                <th scope="row">5</th>
+                <th></th>
+                <th></th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tbody>
+        </table>
+    </div>
+
+    </main>
+
+
+    <div class="modal fade justify-center"   id="ModalCrear" tabindex="-1" >
+        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h1 class="modal-title fs-5" id="ModalCrearLabel">Crear nuevo Contacto</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+                <div class="form-floating">
+                    <input class="form-control d-block mb-3" type="text" placeholder="Nombre">
+                    <label for="floatingInput">Nombre</label>
+                </div>
+
+                <div class="form-floating">
+                    <input class="form-control d-block mb-3" type="text" placeholder="Dirección">
+                    <label for="floatingInput">Dirección</label>
+                </div>
+
+                <div class="form-floating">
+                    <input class="form-control d-block mb-3" type="text" placeholder="Teléfono">
+                    <label for="floatingInput">Teléfono</label>
+                </div>
+
+                <div class="form-floating">
+                    <input class="form-control d-block mb-3" type="email" placeholder="Email">
+                    <label for="floatingInput">Email</label>
+                </div>
+
+                <select class="form-select mb-3" >
+                    <option selected>Sexo</option>
+                    <option value="1">Femenino</option>
+                    <option value="2">Masculino</option>
+                    <option value="3">Reservado</option>
+                </select>
+
+                <input class="form-control d-block mb-3" type="file" >
+
+                <select class="form-select mb-3" aria-placeholder="Relación personal" >
+                    <option selected>Relación personal</option>
+                    <option value="1">Amigo</option>
+                    <option value="2">Pareja</option>
+                    <option value="3">Conocido</option>
+                </select>
+
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Crear</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="modal fade"   id="ModalActualizar" tabindex="-1" >
+        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h1 class="modal-title fs-5" id="ModalActualizarLabel">Actualizar Contacto</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+                <label class="mb-2" for="">Seleccionar contacto a actualizar</label>
+                <select class="form-select mb-3" name="" id="">
+                    <Option>Contacto</Option>
+                </select>
+    
+                <div class="form-floating">
+                    <input class="form-control d-block mb-3" type="text" placeholder="Nombre">
+                    <label for="floatingInput">Nombre</label>
+                </div>
+
+                <div class="form-floating">
+                    <input class="form-control d-block mb-3" type="text" placeholder="Teléfono">
+                    <label for="floatingInput">Teléfono</label>
+                </div>
+
+                <div class="form-floating">
+                    <input class="form-control d-block mb-3" type="text" placeholder="Dirección">
+                    <label for="floatingInput">Dirección</label>
+                </div>
+
+                <div class="form-floating">
+                    <input class="form-control d-block mb-3" type="email" placeholder="Email">
+                    <label for="floatingInput">Email</label>
+                </div>
+
+                <select class="form-select mb-3" >
+                    <option selected>Sexo</option>
+                    <option value="1">Femenino</option>
+                    <option value="2">Masculino</option>
+                    <option value="3">Reservado</option>
+                </select>
+
+                <input class="form-control d-block mb-3" type="file" >
+
+                <select class="form-select mb-3"  >
+                    <option selected>Relación personal</option>
+                    <option value="1">Amigo</option>
+                    <option value="2">Pareja</option>
+                    <option value="3">Conocido</option>
+                </select>
+
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Actualizar</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="ModalEliminar" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Eliminar Contacto</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <label class="mb-2" for="">Seleccionar contacto a eliminar</label>
+                <select class="form-select" name="" id="">
+                    <Option>Contacto</Option>
+                </select>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Eliminar</button>
+            </div>
+        </div>
+        </div>
+    </div>
+</body>
+</html>
