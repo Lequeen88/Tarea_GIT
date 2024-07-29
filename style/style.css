@@ -1,0 +1,39 @@
+
+body{
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+} 
+
+.form, .form2{
+    width: 25em;
+    height: 25em;
+    border: 3px solid lightgray;
+    border-radius: 20px;
+    margin: 9em 35em;
+    background-color: transparent;
+    backdrop-filter: blur(15px);
+
+}
+
+.form2{
+    height: 33em;
+    margin: 5em 35em;
+}
+
+.btn{
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+.row{
+    margin-top: 4px;
+}
