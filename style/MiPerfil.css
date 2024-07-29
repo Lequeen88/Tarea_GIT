@@ -1,0 +1,43 @@
+
+body{
+    background-color: gray;
+}
+
+
+span, svg{
+    color: black;
+}
+
+a{
+    text-decoration: none;
+    border: 3px solid white;
+    border-radius: 30px;
+    padding: 25px;
+    font-size: larger;
+    background-color: lightgray;
+}
+
+.offcanvas{
+    max-width: 300px;
+    background-color: transparent;
+    backdrop-filter: blur(15px);
+}
+
+label{
+    margin-left: 20px;
+}
+
+table{
+    max-width: 80%;
+    max-height: 100px;
+    margin: 25px 150px;
+
+
+}
+
+button{
+
+    margin: 20px 35px 0px 30px;
+    padding: 15px 30px;
+
+}
